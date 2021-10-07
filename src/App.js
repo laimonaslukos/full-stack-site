@@ -8,16 +8,22 @@ import {
 import AboutPage from './pages/AboutPage';
 import ArticleList from './pages/ArticleList';
 import ArticlePage from './pages/ArticlePage';
+import NavBar from './NavBar';
 
 function App() {
   return (
     <Router>
 
  <div className="App">
-   <Route path="/" component={HomePage} exact/>
+   <NavBar />
+   <div id="page-body">
+<Route path="/" component={HomePage} exact/>
    <Route path="/about" component={AboutPage} exact/>
    <Route path="/article-list" component={ArticleList} exact/>
    <Route path="/article" component={ArticlePage} exact/>
+
+   </div>
+   
      
     </div>
 
